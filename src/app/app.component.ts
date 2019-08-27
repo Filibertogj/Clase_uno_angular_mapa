@@ -13,13 +13,17 @@ export class AppComponent {
 
   nombre:string = '';
 paises:any = [
-  {activo:true, nombre: 'Colombia'},
-  {activo:true, nombre: 'Brasil'},
-  {activo:false, nombre: 'Argentina'},
-  {activo: true, nombre:  'Polonia'},
-  {activo: false, nombre: 'Alemania'},
-  {activo: true, nombre: 'Francia'}
+  {cercano: 1, nombre: 'Colombia'},
+  {cercano:1, nombre: 'Brasil'},
+  {cercano:2, nombre: 'Argentina'},
+  {cercano: 3, nombre:  'Polonia'},
+  {cercano: 3, nombre: 'Alemania'},
+  {cercano: 3, nombre: 'Francia'}
 ]
+
+
+lat:number = 51.678418;
+lng:number = 7.809007;
 
 constructor(){
   setTimeout(() => {

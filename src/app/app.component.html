@@ -20,6 +20,20 @@
   </div>
 </div>
 
+<div>
+  <ul>
+    <ng-container *ngFor="let pais of paises; let i = index" [ngSwith]="pais.cercano">
+      <li [ngStyle]="{color: (pais.activo) ? 'black' : 'gray'}"
+      [ngClass]="{numero_par: (i + 1) % 2 !==0}">
+      {{pais.nombre}} -
+      <span *ngSwithCase=1>Cerca</span>
+      <span *ngSwithCase=1>Lejos</span>
+      <span *ngSwithCase=1>Muy Lejos</span>
+    </li>
+    </ng-container>
+  </ul>
+</div>
+
 
 
 <router-outlet></router-outlet>
